@@ -4,58 +4,58 @@
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <title>Employee PayRoll Form</title>
+        <title>Employee Payroll Form</title>
         <style type="text/css">
             body{
                 margin: 0;
                 height: 100%;
             }
             .header{
-                padding: 15px 0;
-                background-color: black;
+                padding: 15px 0; 
+                background-color: #ffffff;
             }
             .header-content{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                border: 0px solid yellow;
+                border: 0px solid green;
             }
             .logo-content{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                border: solid yellow;
+                border: 0px solid green;
                 width: 80%;
             }
             .logo-content-img{
-                border: solid gray;
+                border: solid 0px #42515f;
             }
             .emp-text{
                 font: normal normal bold 20px/25px Montserrat;
                 font-family: "Montserrat",sans-serif;
                 letter-spacing: 0px;
-                color: yellowgreen;
+                color: #82a70c;
                 text-transform: capitalize;
             }
             .emp-payroll{
-                color: white;
+                color: #42515f;
             }
             *{ box-sizing: border-box;}
 
             .form-content{
-                min-height: cal(100%-80px);
-                background-color: cadetblue;
+                min-height: calc(100%-80px);
+                background-color: #f7f7f7;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 0px solid yellow;
+                border: 0px solid green;
             }
             .form{
                 width: 65%;
                 padding: 44px 60px;
-                background: white 0% 0% no-repeat padding-box;
-                box-shadow: 1px solid white;
+                background: #ffffff 0% 0% no-repeat padding-box;
+                box-shadow: 1px solid #f5f5f5;
                 border-radius: 8px;
                 opacity: 1;
             }
@@ -74,7 +74,7 @@
                 align-items: center;
                 border: 0px solid green;
             }
-            .lable{
+            .label{
                 min-width: 140px;
             }
             label{
@@ -83,14 +83,14 @@
             }
             .text{
                 font-size: 16px;
-                color: darkred;
+                color: #42515f;
                 opacity: 1;
                 font-family: Roboto;
             }
             .input{
                 width: 100%;
                 padding: 12px;
-                border: 1px solid white;
+                border: 1px solid #ccc;
                 border-radius: 4px;
                 resize: vertical;
             }
@@ -112,12 +112,12 @@
     </head>
     <body>
         <header class="header-content header">
-            <div class = "logo-content">
-                <img src ="C:\Users\Admin\EmpPayRollApp\assets\images\logo.png">
-              <div>
-                <span class="emp-text">EMPLOYEE</span><br>
-                <span class="emp-text emp-payroll">PAYROLL</span>    
-              </div>  
+            <div class="logo-content">
+                <img src="../assets/images/logo.png">
+                <div>
+                    <span class="emp-text">EMPLOYEE</span><br>
+                    <span class="emp-text emp-payroll">PAYROLL</span>
+                </div>
             </div>
         </header>
         <div class="form-content">
@@ -150,7 +150,37 @@
                         </label>
                     </div>
                 </div>
+                <div class="row-content">
+                    <label class="label text" for="gender">Gender</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label class="text" for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label class="text" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="department">Department</label>
+                    <div>
+                        <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                        <label class="text" for="hr">HR</label>
+                        <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                        <label class="text" for="sales">Sales</label>
+                        <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                        <label class="text" for="finance">Finance</label>
+                        <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                        <label class="text" for="engineer">Engineer</label>
+                        <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                        <label class="text" for="others">Others</label>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="salary">Choose your salary: </label>
+                    <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                    <output class="salary-output text" for="salary">400000</output>
+                </div>
             </form>
-        </div> 
+        </div>
     </body>
+
 </html>
