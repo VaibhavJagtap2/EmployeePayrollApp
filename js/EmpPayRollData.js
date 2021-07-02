@@ -91,6 +91,12 @@ class EmployeePayrollData{
     get startDate(){
         return this._startDate;
     }
+    get notes(){
+        return this._notes;
+    }
+    set notes(notes){
+        this._notes = notes;
+    }
     set startDate(startDate){
         if(startDate.getTime()<=(new Date()).getTime()
         &&((((new Date()).getTime())-(startDate.getTime()))/(1000*60*60*24))<=30 ){
@@ -195,8 +201,7 @@ const resetForm = () => {
 
 const unsetSelectedValues = (propertyValue) => {
     let allItems = document.querySelectorAll(propertyValue);
- 
     allItems.forEach(item=>{
         item.checked = false;
     });
-}
+} 
