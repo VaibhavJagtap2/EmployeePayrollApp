@@ -78,6 +78,7 @@ body{
     width: 26px;
     text-align: center;
     display: inline-block;
+    margin-left: 5px;
 }
 .table-main{
     width: 80%;
@@ -136,4 +137,5 @@ td img{
     display: inline-block;
     font-weight: 300;
     margin-bottom: 8px;
+    margin-right: 10px;
 }
